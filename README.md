@@ -1,5 +1,6 @@
 # ESET
 suod docker compose up -d
+
 config nginx.cong ---> /etc/nginx/conf.d/vi eset.conf
 server {
     listen                  80;
@@ -18,6 +19,10 @@ server {
     }
 }
 
+
+
 nginx -s reload
+
 systemctl restart nginx.services
+
 systemctl restart nginx
