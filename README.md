@@ -4,15 +4,15 @@ config nginx.cong ---> /etc/nginx/conf.d/vi eset.conf
 server {
     listen                  80;
     return                  301 https://$host$request_uri;
-    server_name             eset-console.srv.bigbang.dotin.ir;
+    server_name             "server name url";
 }
 
 server {
     listen                  443 ssl;
-    server_name             eset-console.srv.bigbang.dotin.ir;
-    ssl_certificate         /etc/ssl/certs/srv.bigbang.dotin.ir/cert.pem;
-    ssl_certificate_key     /etc/ssl/private/srv.bigbang.dotin.ir/key.pem;
-    ssl_password_file       /etc/ssl/private/srv.bigbang.dotin.ir/pass.txt;
+    server_name             "server name url";
+    ssl_certificate         /etc/ssl/certs/server name/cert.pem;
+    ssl_certificate_key     /etc/ssl/private/server name/key.pem;
+    ssl_password_file       /etc/ssl/private/sarver name/pass.txt;
     location / {
         proxy_pass          http://localhost:8080;
     }
